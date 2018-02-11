@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+      <title> Spring Boot  Thymeleaf </title>
+      <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+</head>
+<body>
+   <h1>Contact List</h1>
+    <table>
+        <tr>
+           <th>ID</th>
+           <th>Number</th>
+           <th >Name</th>
+           <th >Surname</th>
+           <th>Lastname</th>
+        </tr>
+        <tr th:each="contact : ${allContacts}">
+	      <td th:text="${contact.id}">Id</td>
+		  <td th:text="${contact.number}">Title</td>
+		  <td th:text="${contact.name}">Gender</td>
+		  <td th:text="${contact.surname}">Married</td>
+		  <td th:text="${contact.lastname}">Profile</td>		  		  
+	    </tr>	
+	</table>
+	<a href="#" th:href="@{/contacts/create}">Add User</a>
+</body>
+</html> 

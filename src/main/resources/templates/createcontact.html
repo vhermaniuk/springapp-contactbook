@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title> Spring Boot  Thymeleaf </title>
+        <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+    </head>
+	<body>
+	<h2></h2>
+	    <h1>Create Contact</h1>
+	    <form action="#" th:action="@{/contacts}" th:object="${contact}" method="POST">
+	      <table>
+	    	<tr><td>Contact ID</td>
+	    	    <td>
+	    	       <input type="text" th:field="*{id}" />
+	    	       <label th:if="${#fields.hasErrors('id')}" th:class="'error'">Enter Id</label>
+	    	    </td>
+	    	</tr>
+	    	<tr><td>Contact Number</td>
+	    	    <td>
+	    	      <input type="text" th:field="*{number}" />
+	    	      <label th:if="${#fields.hasErrors('number')}"  th:class="'error'">Enter Contact Number</label>
+	    	    </td>
+	    	</tr>
+	    	<tr><td>Contact Name</td>
+	    	    <td>
+	    	      <input type="text" th:field="*{name}" />
+	    	      <label th:if="${#fields.hasErrors('name')}"  th:class="'error'">Enter Contact Name</label>
+	    	    </td>
+	    	</tr>	    	
+	    	<tr><td>Contact Surname</td>
+	    	    <td>
+	    	      <input type="text" th:field="*{surname}" />
+	    	      <label th:if="${#fields.hasErrors('surname')}"  th:class="'error'">Enter Contact Surname</label>
+	    	    </td>
+	    	</tr>
+	    	<tr><td>Contact Lastname</td>
+	    	    <td>
+	    	      <input type="text" th:field="*{lastname}" />
+	    	      <label th:if="${#fields.hasErrors('lastname')}"  th:class="'error'">Enter Contact Lastname</label>
+	    	    </td>
+	    	</tr>
+	        <tr><td colspan="2">
+	              <input type="submit" th:value="Submit"/> 
+	              <input type="reset" th:value="Reset"/>
+	            </td>
+	        </tr>
+	      </table>  
+	    </form>
+	</body>
+</html> 
