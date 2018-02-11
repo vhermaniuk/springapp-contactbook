@@ -9,12 +9,12 @@
 	    <h1>Create Contact</h1>
 	    <form action="#" th:action="@{/contacts}" th:object="${contact}" method="POST">
 	      <table>
-	    	<tr><td>Contact ID</td>
+<!-- 	    	<tr><td>Contact ID</td>
 	    	    <td>
 	    	       <input type="text" th:field="*{id}" />
 	    	       <label th:if="${#fields.hasErrors('id')}" th:class="'error'">Enter Id</label>
 	    	    </td>
-	    	</tr>
+	    	</tr> -->
 	    	<tr><td>Contact Number</td>
 	    	    <td>
 	    	      <input type="text" th:field="*{number}" />
