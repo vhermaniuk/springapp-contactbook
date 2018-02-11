@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=%DERBY_HOME%\lib\derbyclient.jar -DgroupId=com.apache -DartifactId=dbderby10 -Dversion=10.14.1.0 -Dpackaging=jar
